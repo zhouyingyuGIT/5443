@@ -1,0 +1,22 @@
+#戳泡泡游戏参数调整czj20181210
+
+## 泡泡的数量控制在pop.router.js 149行
+POP.nextBubble = POP.rnd(10 - POP.level, 50); 
+把数值50改大，泡泡生成数量反而会减小。
+
+## 泡泡数据记录在pop.router.js 220-250行
+点击准确率 POP.score.accuracy = ~~((POP.score.burst / POP.score.taps) * 100);
+击破的泡泡数量 POP.score.burst
+总用时（单位：秒）POP.score.seconds = ~~(( new Date().getTime() - POP.gameStart ) / 1000);
+总得分 POP.score.total = ~~(POP.score.burst * 10) + (POP.score.seconds * 1);
+
+## 结束条件（命live）判定在pop.base.js 32行和pop.router.js 232行
+### MAX_LIVES: 9   pop.base.js数值9可以换成别的
+### if (POP.lives <= 0) pop.router.js
+新增一个对时间的判断，    endseconds = ~~(( new Date().getTime() - POP.gameStart ) / 1000);
+    if (POP.lives <= 0 || endseconds >=180 ) {
+180表明180秒后游戏结束
+
+## 结束条件（命live）在界面上的显示在pop.router.js 229行
+ POP.draw.circle( (i * 25) + (POP.W - 300), 30, 10, live_col);  
+25别改，25是小圆圈的间隔，25这个值最合适。

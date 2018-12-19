@@ -1,0 +1,77 @@
+html, body
+{
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	font-family: monospace;
+	font-size: 24px;
+	color: #aaaaaa; /* text color */
+	text-align: center; /* center canvas */
+	-webkit-transition: .6s ease;
+	transition: .6s ease;
+}
+
+#topdiv
+{
+	height: 100px;
+}
+
+#logo
+{
+	/* Horizontally center */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%; /* force it to fit in the top div */
+}
+
+#leftdiv
+{
+	float: left;
+	width: 20%;
+	height: 75%;
+	display: table;  /* allows for vertical centering */
+}
+
+#controlsdiv
+{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.textbox
+{
+	text-align: center;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#gameboard
+{
+	height: 75%;
+	
+}
+
+#offscreen_canvas
+{
+	display: none;
+}
+
+#rightdiv
+{
+	float: right;
+	width: 20%;
+	height: 75%;
+	display: table;
+}
+
+#leveldiv
+{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}

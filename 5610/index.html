@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | ff</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/w.json", {onProgress: UnityProgress});
+
+
+    </script>
+
+    <Script type = "text/javascript" language = "javascript">
+      function alterRes( a, b, c, d, e,f)
+      {
+        alert(a+b+c+d+e+f);
+      }
+
+      function initParam()
+      {
+        // 设置最高等级
+        gameInstance.SendMessage("game", "SetMaxLevel", "4");
+        // 设置最低等级
+        gameInstance.SendMessage("game", "SetMinLevel", "2");
+        // 设置火车速度
+        gameInstance.SendMessage("game", "SetTrainSpeed", "0.5");
+        // 设置升级正确率
+        gameInstance.SendMessage("game", "SetRatioLevelup", "0.85");
+        // 设置火车生成间隔时间
+        gameInstance.SendMessage("game", "SetGenTrainTime", "4");
+        // 设置每轮火车数量
+        gameInstance.SendMessage("game", "SetTrainCountPerRound", "2");
+      }
+    </Script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <!--div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div-->
+        <div class="title">火车扳道工</div>
+      </div>
+    </div>
+  </body>
+</html>
