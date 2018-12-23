@@ -234,7 +234,7 @@ Vector
                 <!--<h4 id="ti" style="color: #555">准备好了吗？准备好了就点击开始计时</h4>-->
 
                 <div style="margin-top: 100px;text-align: center;width: 100%">
-                    <input onkeyup="this.value=this.value.replace(/\D/g,'')" id="inputAnswer" type="text" placeholder="请输入您的计算结果">
+                    <input disabled="disabled" onkeyup="this.value=this.value.replace(/\D/g,'')" id="inputAnswer" type="text" placeholder="请输入您的计算结果">
                 </div>
             </div>
 
@@ -350,11 +350,9 @@ Vector
                 endTime=new Date().getTime();
                 realTime=(endTime-beginTime).toFixed(0);
                 beginTime=new Date().getTime();
-                numset=$("#inputAnswer").val();
+                $("#inputAnswer").removeAttr("disabled");
+
                 type4set=parseInt(level)/10;
-                $("#inputAnswer").css({
-                    display: "none"
-                });
                 ifBtn3=true;
             }
 
@@ -367,6 +365,7 @@ Vector
                     "background-color": "#aaa",
                     "border-color": "#aaa"
                 });
+                numset=$("#inputAnswer").val();
                 endTime=new Date().getTime();
                 dumpTime=(endTime-beginTime).toFixed(0);
                 timeset=realTime;
@@ -414,17 +413,17 @@ Vector
             opes_result_data.timeaverage = Math.round(0);
 
             //以下判断总题数
-            opes_result_data.type4set = type4set;
+            opes_result_data.type4set = type4set.toString();
             opes_result_data.stimidset = "0";
             opes_result_data.correctanswerset = "0";
             opes_result_data.time = "0";
             opes_result_data.level = "0";
 
-            opes_result_data.timeset = timeset;
+            opes_result_data.timeset = timeset.toString();
             opes_result_data.radioset = "0";
-            opes_result_data.buttonset = numset;
-            opes_result_data.commentset = commentset;
-            opes_result_data.numset = numset;
+            opes_result_data.buttonset = numset.toString();
+            opes_result_data.commentset = commentset.toString();
+            opes_result_data.numset = numset.toString();
             opes_post_result_util_js_opes_post_result(opes_result_data);
             return;
 

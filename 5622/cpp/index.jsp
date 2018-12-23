@@ -214,7 +214,7 @@ Vector 	<OPES_Task> ots=OPES_TaskDAO.getOPES_aTask(Integer.parseInt(request.getP
 		<div style="display: none;">
 			<script type="text/javascript">
             var myData = { gameid: "cpp" };
-			window.shareData.timeLineLink = "http://g.lanrenmb.com/index.html" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
+			window.shareData.timeLineLink = "http://g.lanrenmb.com/index.jsp" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
 			function dp_submitScore(score){
 				myData.score = score;//分数就是score
 				myData.scoreName = "戳了"+score+"分";
@@ -229,7 +229,7 @@ Vector 	<OPES_Task> ots=OPES_TaskDAO.getOPES_aTask(Integer.parseInt(request.getP
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到游戏排行榜吗？")) {
-                            window.location = "http://g.lanrenmb.com.com/index.html" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
+                            window.location = "http://g.lanrenmb.com.com/index.jsp" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
                         }
                         else {
                             document.location.href = mebtnopenurl;

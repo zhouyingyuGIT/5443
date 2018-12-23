@@ -6,9 +6,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>听珠算</title>
+    <title>听心算</title>
     <style>
-
+        /** {margin: 0; padding: 0; list-style: none;}*/
         .box{
             width: 1000px;
             margin: 16px auto 0px;
@@ -82,15 +82,15 @@
         }
         .buttonBox{
             position: absolute;
-            bottom: 0px;
-            height: 60px;
+            bottom:0px;
+            height: 100px;
             width: 100%;
-            line-height: 60px;
+            line-height: 100px;
             text-align: center;
         }
         .ti{
-            width: 120px;
-            padding: 0px 0px 0px;
+            width: 300px;
+            padding: 200px 0px 0px;
             margin: 0px auto;
         }
         .ti input{
@@ -139,8 +139,20 @@
             position: absolute;
             background-color: #0ad845;
         }
+        ul{
+            list-style:none;
+            margin: 0; padding: 0;
+        }
+        #wrap {width:900px; margin: 0px auto; overflow: hidden;height: 348px; padding: 0;}
+        #tit {height: 48px;width: 900px;margin: 0; padding: 0;}
+        #tit span {float: left; height: 48px; line-height: 48px; width: 90px; font-size: 20px; text-align: center; color: #000;background: #00b0f0;cursor: pointer;margin: 0; padding: 0;}
+        #con li{display: none; height: 300px; width: 900px; background: #fff;font-size: 20px;text-align: center;margin: 0; padding: 0;}
+        #tit span.select {background: #000; color: #fff;margin: 0; padding: 0;}
+        #con li.show {display: block;margin: 0; padding: 0;}
+
         #step1{
             display: block;
+
         }
         #step2{
             display: none;
@@ -185,65 +197,76 @@ Vector
 
     %>
 <body>
+
 <div class="box">
     <div id="tir" style="color: #9f0f17;position: fixed;top: 0px;width: 500px;height: 100px"></div>
-    <div id="step1" class="step step1">
-        <h1 style="margin: 0px">听珠算</h1>
-        <!--digit-->
-        <div class="levelBox">
-            <div class="title">位数</div>
-            <div id="digitBox" class="digitBox">
-                <span class="le digit active">1</span>
-                <span class="le digit">2</span>
-                <span class="le digit">3</span>
-                <span class="le digit">4</span>
-                <!--<span class="le digit">5</span>-->
-                <!--<span class="le digit">6</span>-->
-                <!--<span class="le digit">7</span>-->
+    <div id="step1" class="step">
+        <div style="line-height: 100px;font-size: 28px;text-align: center;font-weight: 700;">听心算</div>
+        <div id="wrap">
+            <div id="tit">
+                <span class="select">类型一</span>
+                <span>类型二</span>
+                <span>类型三</span>
+                <span>类型四</span>
+                <span>类型五</span>
+                <span>类型六</span>
+                <span>类型七</span>
+                <span>类型八</span>
+                <span>类型九</span>
+                <span>类型十</span>
             </div>
+            <ul id="con">
+                <li class="show">
+                    <div style="line-height: 100px">一个两位数，两个一位数混合加减</div>
+                    <div style="margin-top: 130px"><button data-index="1" class="btn stepBtn1">开始</button></div>
+                </li>
+                <li>
+                    <div style="line-height: 100px">两个两位数，一个一位数混合加减</div>
+                    <div style="margin-top: 130px"><button data-index="2" class="btn stepBtn1">开始</button></div>
+                </li>
+                <li>
+                    <div style="line-height: 100px">三个两位数，一个一位数混合加减</div>
+                    <div style="margin-top: 130px"><button data-index="3" class="btn stepBtn1">开始</button></div>
+                </li>
+                <li>
+                    <div style="line-height: 100px">三个两位数，两个一位数混合加减</div>
+                    <div style="margin-top: 130px"><button data-index="4" class="btn stepBtn1">开始</button></div>
+                </li>
+                <li>
+                    <div style="line-height: 100px">四个两位数，一个一位数混合加减</div>
+                    <div style="margin-top: 130px"><button data-index="5" class="btn stepBtn1">开始</button></div>
+                </li>
+                <li>
+                    <div style="line-height: 100px">一个三位数，二个二位数混合加减</div>
+                    <div style="margin-top: 130px"><button data-index="6" class="btn stepBtn1">开始</button></div>
+                </li>
+                <li>
+                    <div style="line-height: 100px">两个三位数，一个二位数混合加减</div>
+                    <div style="margin-top: 130px"><button data-index="7" class="btn stepBtn1">开始</button></div>
+                </li>
+                <li>
+                    <div style="line-height: 100px">两个三位数，二个二位数混合加减</div>
+                    <div style="margin-top: 130px"><button data-index="8" class="btn stepBtn1">开始</button></div>
+                </li>
+                <li>
+                    <div style="line-height: 100px">一个三位数，两个两位数，二个一位数混合加减</div>
+                    <div style="margin-top: 130px"><button data-index="9" class="btn stepBtn1">开始</button></div>
+                </li>
+                <li>
+                    <div style="line-height: 100px">一个三位数，两个两位数，三个一位数混合加减</div>
+                    <div style="margin-top: 130px"><button data-index="10" class="btn stepBtn1">开始</button></div>
+                </li>
+            </ul>
         </div>
-        <div class="levelBox">
-            <div class="title">笔数</div>
-            <div id="pensBox" class="pensBox">
-                <span class="le pens active">3</span>
-                <span class="le pens">4</span>
-                <span class="le pens">5</span>
-                <span class="le pens">6</span>
-                <span class="le pens">7</span>
-            </div>
-        </div>
-
-
-        <div class="buttonBox">
-            <button id="stepBtn1" class="btn">开始训练</button>
-        </div>
-
-
-
     </div>
-    <div id="step2" class="step step2">
-
+    <div id="step2" class="step">
+        <div id="fayin"></div>
         <div class="ti">
-            <div id="t1" class="tl t1"></div>
-            <div id="t2" class="tl t2"></div>
-            <div id="t3" class="tl t3"></div>
-            <div id="t4" class="tl t4"></div>
-            <div id="t5" class="tl t5"></div>
-            <div id="t6" class="tl t6"></div>
-            <div id="t7" class="tl t7"></div>
-            <!--<hr style="margin: 16px 0px">-->
-            <div><input onkeyup="this.value=this.value.replace(/\D/g,'')" id="answer" type="text" style="width: 100%"></div>
+            <input disabled="disabled" onkeyup="this.value=this.value.replace(/\D/g,'')" id="answer" type="text">
         </div>
-
-
-
-
-
         <div class="buttonBox">
-            <button id="stepBtn2" class="btn">确认(ENTER)</button>
+            <button id="stepBtn2" disabled="disabled" class="btn">确认</button>
         </div>
-
-
 
     </div>
     <div id="step3" class="step step3">
@@ -368,668 +391,388 @@ Vector
             <!--<button id="stepBtn3" class="btn">下一题</button>-->
         </div>
     </div>
-    <div id="fayin"></div>
 </div>
 </body>
 <script src="jquery.js"></script>
-<!--<script src="Listen_to_abacus.js"></script>-->
 <script>
     $(function () {
-        var digit="1";
-        var pens="3";
-        var taskid;
-        var answer;
-        var num;
-        var time;
-        var beginTime;
-        var endTime;
-        var speed="5";
-        var spacer=false;
-        var enter=false;
-        var timer1=null;
-        var topicTime=5;
-        var numExcessive;
+        var topicTypes="1";
+        var speed=5;
+        var numArr=[1,2,3,4,5,6,7,8,9];
+        var numBrr=[0,1,2,3,4,5,6,7,8,9];
+        var NexTime=1;
         var correctanswerset=[];
         var numset=[];
         var timeset=[];
         var type4set=[];
         var commentset=[];
         var stimidset=[];
-        var stimid=0;
         var arrT=[];
+        var time;
+        var timer=null;
+        var timer1=null;
+        var stimid=0;
+        var answer;
+        var answer1;
+        var enter=false;
         var maxtime=180;
-        var NexTime=1;
-        var a=0;
-        var numArr=[1,4,7,2,5,8,6,3,9];
-        var num1;
-        var num2;
-        var num3;
-        var num4;
-        var num5;
-        var num6;
-        var num7;
+        var beginTime;
+        var endTime;
+        var num1,num2,num3,num4,num5,num6;
 
 
-        taskid=getUrlParam("taskid");
-
-        taskidFun(taskid);
-        function taskidFun(taskid) {
-            if(taskid == "5504"){
-                digit="2";
-
-            }else if(taskid == "5505"){
-                digit="3";
-            }else if(taskid == "5506"){
-                digit="4";
-            }
-
-            for (var i=1;i<8;i++){
-                if(digit == i){
-                    console.log("digit");
-                    $("#digitBox .le:nth-child("+i+")").addClass("active");
-                }else {
-                    $("#digitBox .le:nth-child("+i+")").removeClass("digit");
-                    $("#digitBox .le:nth-child("+i+")").removeClass("active");
-                    $("#digitBox .le:nth-child("+i+")").css({
-                        "background-color": "#eee"
-                    });
-                }
-            }
-        }
 
 
-        function getUrlParam(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-            var r = window.location.search.substr(1).match(reg);
-            if (r != null) return unescape(r[2]); return null;
-        }
-
-        function CountDown() {
-            if (maxtime >= 0) {
-                minutes = Math.floor(maxtime / 60);
-                seconds = Math.floor(maxtime % 60);
-                msg = "距离结束还有" + minutes + "分" + seconds + "秒";
-                $("#tir").text(msg);
-                --maxtime;
-            } else{
-                clearInterval(timer);
-                post_result()
-            }
-        }
-
-        $("#digitBox").on("click",".digit",function(event){
-            var target = $(event.target);
-            $("#digitBox .digit").removeClass("active");
-            target.addClass("active");
-            digit=target.text();
+        $('#tit span').click(function() {
+            var i = $(this).index();//下标第一种写法
+            //var i = $('tit').index(this);//下标第二种写法
+            $(this).addClass('select').siblings().removeClass('select');
+            $('#con li').eq(i).show().siblings().hide();
         });
 
-        $("#pensBox").on("click",".pens",function(event){
-            var target = $(event.target);
-            $("#pensBox .pens").removeClass("active");
-            target.addClass("active");
-            pens=target.text();
-        });
-        // 随机生成第一位数
-        function num1Fun(digit) {
-            var num = "";
-            for (var i = 0; i < digit; i++) {
-                num += (numArr[Math.floor(Math.random()*numArr.length)]).toString()
-            }
-            return num;
-        };
-        // 生成加数
-        function additionFun(data) {
-            var arr1 = data.split('');
-            arr1.reverse();
-            var numA = "";
-            for (var i = 0; i<digit; i++) {
-                numA+= (numArr[Math.floor(Math.random()*numArr.length)]).toString()
-            }
-            return numA;
-        }
-        // 生成减数
-        function subtractionFun(data) {
-            var arr2=data.split('');
-            arr2.reverse();
-            var numB = "";
-            var dl=parseInt(digit)-1;
-            if(digit<data.toString().length){
-                for(var i=0;i<digit;i++){
-                    numB+= (numArr[Math.floor(Math.random()*numArr.length)]).toString()
-                }
-                return numB
-            }else {
-                var minNum;
-                switch(digit){
-                    case "1":
-                        minNum=0;
-                        break;
-                    case "2":
-                        minNum=10;
-                        break;
-                    case "3":
-                        minNum=100;
-                        break;
-                    case "4":
-                        minNum=1000;
-                        break;
-                    case "5":
-                        minNum=10000;
-                        break;
-                    case "6":
-                        minNum=100000;
-                        break;
-                    case "7":
-                        minNum=1000000;
-                        break;
-                    case "8":
-                        minNum=10000000;
-                        break;
-                }
-                return generateRandomValInGivenNum(minNum, data)
-            }
 
-        }
-        function generateRandomValInGivenNum(lowerInteger, upperInteger) {
-            var choices = upperInteger - lowerInteger + 1;
-            return Math.floor(Math.random() * choices + lowerInteger);
-        }
+        $("#con").on("click",".stepBtn1",function(event){
 
-        function pensFun(pens) {
-            arrT=[];
-            num1=num1Fun(digit);
-            if(digit<2){
-                var t=(speed*1000)/4;
-            }else {
-                var t=(speed*1000)/2;
-            }
-
-            num2="";
-            num3="";
-            num4="";
-            num5="";
-            num6="";
-            num7="";
-            showHideFun(pens);
-            if(pens == "3"){
-                num2=additionFun(num1);
-                numExcessive=(parseInt(num1)+parseInt(num2)).toString();
-                num3=subtractionFun(numExcessive);
-                topicTime=3;
-                timer1 = setInterval(function () {
-                    if(topicTime==3){
-                        fayin(num1,speed);
-                    }else if(topicTime==2){
-                        fayin(num2,speed);
-                    }else if(topicTime==1){
-                        fayin("减"+num3,speed);
-                    }else if(topicTime==0){
-                        clearInterval(timer1);
-                    }else {
-                    }
-                    topicTime--
-                }, t);
-
-
-                arrT.push(num1);
-                arrT.push(num2);
-                arrT.push(-num3);
-                /*$("#t1").text(num1);
-                $("#t2").text(num2);
-                $("#t3").text(-num3);*/
-                num=(parseInt(numExcessive)-parseInt(num3)).toString();
-            }else if(pens == "4"){
-                num2=additionFun(num1);
-                numExcessive=(parseInt(num1)+parseInt(num2)).toString();
-                num3=additionFun(numExcessive);
-                numExcessive=(parseInt(numExcessive)+parseInt(num3)).toString();
-                num4=subtractionFun(numExcessive);
-                topicTime=4;
-                timer1 = setInterval(function () {
-                    if(topicTime==4){
-                        fayin(num1,speed);
-                    }else if(topicTime==3){
-                        fayin(num2,speed);
-                    }else if(topicTime==2){
-                        fayin(num3,speed);
-                    }else if(topicTime==1){
-                        fayin("减"+num4,speed);
-                    }else if(topicTime==0){
-                        clearInterval(timer1);
-                    }else {
-                    }
-                    topicTime--
-                }, t);
-                arrT.push(num1);
-                arrT.push(num2);
-                arrT.push(num3);
-                arrT.push(-num4);
-
-
-                num=(parseInt(numExcessive)-parseInt(num4)).toString();
-            }else if(pens == "5"){
-                num2=additionFun(num1);
-                numExcessive=(parseInt(num1)+parseInt(num2)).toString();
-                num3=subtractionFun(numExcessive);
-                numExcessive=(parseInt(numExcessive)-parseInt(num3)).toString();
-                num4=additionFun(numExcessive);
-                numExcessive=(parseInt(numExcessive)+parseInt(num4)).toString();
-                num5=additionFun(numExcessive);
-                topicTime=5;
-                timer1 = setInterval(function () {
-                    if(topicTime==5){
-                        fayin(num1,speed);
-                    }else if(topicTime==4){
-                        fayin(num2,speed);
-                    }else if(topicTime==3){
-                        fayin("减"+num3,speed);
-                    }else if(topicTime==2){
-                        fayin(num4,speed);
-                    }else if(topicTime==1){
-                        fayin(num5,speed);
-                    }else if(topicTime==0){
-                        clearInterval(timer1);
-                    }else {
-
-                    }
-                    topicTime--
-                }, t);
-                arrT.push(num1);
-                arrT.push(num2);
-                arrT.push(-num3);
-                arrT.push(num4);
-                arrT.push(num5);
-
-                num=(parseInt(numExcessive)+parseInt(num5)).toString();
-            }else if(pens == "6"){
-                num2=additionFun(num1);
-                numExcessive=(parseInt(num1)+parseInt(num2)).toString();
-                num3=subtractionFun(numExcessive);
-                numExcessive=(parseInt(numExcessive)-parseInt(num3)).toString();
-                num4=additionFun(numExcessive);
-                numExcessive=(parseInt(numExcessive)+parseInt(num4)).toString();
-                num5=additionFun(numExcessive);
-                numExcessive=(parseInt(numExcessive)+parseInt(num5)).toString();
-                num6=subtractionFun(numExcessive);
-                topicTime=6;
-                timer1 = setInterval(function () {
-                    if(topicTime==6){
-                        fayin(num1,speed);
-                    }else if(topicTime==5){
-                        fayin(num2,speed);
-                    }else if(topicTime==4){
-                        fayin("减"+num3,speed);
-                    }else if(topicTime==3){
-                        fayin(num4,speed);
-                    }else if(topicTime==2){
-                        fayin(num5,speed);
-                    }else if(topicTime==1){
-                        fayin("减"+num6,speed);
-                    }else if(topicTime==0){
-                        clearInterval(timer1);
-                    }else {
-                    }
-                    topicTime--
-                }, t);
-                arrT.push(num1);
-                arrT.push(num2);
-                arrT.push(-num3);
-                arrT.push(num4);
-                arrT.push(num5);
-                arrT.push(-num6);
-
-                num=(parseInt(numExcessive)-parseInt(num6)).toString();
-            }else if(pens == "7"){
-                num2=additionFun(num1);
-                numExcessive=(parseInt(num1)+parseInt(num2)).toString();
-                num3=subtractionFun(numExcessive);
-                numExcessive=(parseInt(numExcessive)-parseInt(num3)).toString();
-                num4=additionFun(numExcessive);
-                numExcessive=(parseInt(numExcessive)+parseInt(num4)).toString();
-                num5=additionFun(numExcessive);
-                numExcessive=(parseInt(numExcessive)+parseInt(num5)).toString();
-                num6=subtractionFun(numExcessive);
-                numExcessive=(parseInt(numExcessive)-parseInt(num6)).toString();
-                num7=additionFun(numExcessive);
-                topicTime=7;
-                timer1 = setInterval(function () {
-                    if(topicTime==7){
-                        fayin(num1,speed);
-                    }else if(topicTime==6){
-                        fayin(num2,speed);
-                    }else if(topicTime==5){
-                        fayin("减"+num3,speed);
-                    }else if(topicTime==4){
-                        fayin(num4,speed);
-                    }else if(topicTime==3){
-                        fayin(num5,speed);
-                    }else if(topicTime==2){
-                        fayin("减"+num6,speed);
-                    }else if(topicTime==1){
-                        fayin(num7,speed);
-                    }else if(topicTime==0){
-                        clearInterval(timer1);
-                    }else {
-                    }
-                    topicTime--
-                }, t);
-
-                arrT.push(num1);
-                arrT.push(num2);
-                arrT.push(-num3);
-                arrT.push(num4);
-                arrT.push(num5);
-                arrT.push(-num6);
-                arrT.push(num7);
-
-                num=(parseInt(numExcessive)+parseInt(num7)).toString();
-            }
-
-        }
-
-        $("#stepBtn1").on("click",function () {
-
-            pensFun(pens);
+            topicTypes = $(this).attr("data-index");
+            stimid++;
+            topicFun(topicTypes);
+            $("#answer").attr("disabled","disabled");
+            $("#stepBtn2").attr("disabled","disabled");
+            $("#step1").css({
+                "display": "none"
+            });
+            $("#step2").css({
+                "display": "block"
+            });
+            $("#step3").css({
+                "display": "none"
+            });
             timer = setInterval(function () {
                 CountDown();
             }, 1000);
-            stimid++;
-            $("#step1").css({
-                "display": "none"
-            });
-
-            $("#step2").css({
-                "display": "block"
-            });
-            $("#step3").css({
-                "display": "none"
-            });
-            $("#answer").val("");
-            $("input").focus();
             beginTime=new Date().getTime();
+            $("#answer").val("");
             enter=true;
-
         });
+        function randomsort(a, b) {
+            return Math.random()>.5 ? -1 : 1;
+            //用Math.random()函数生成0~1之间的随机数与0.5比较，返回-1或1
+        }
 
+// 生成数
+        function numFun(digit) {
+            var numB='';
+            for(var i=0;i<digit;i++){
+                if(i==0){
+                    numB += (numArr[Math.floor(Math.random()*numArr.length)]).toString();
+                }else {
+                    numB += (numBrr[Math.floor(Math.random()*numBrr.length)]).toString();
+                }
+
+            }
+            return numB
+        }
+
+        function topicFun(topicTypes) {
+            arrT=[];
+            var arrNum=[];
+            var t=2000;
+            num1='';num2='';num3='';num4='';num5='';num6='';
+            if(topicTypes == 1){
+                t=1500;
+                num1=numFun(2);num2=numFun(1);num3=numFun(1);
+                arrNum=[num1,num2,num3];
+                arrNum.sort(randomsort);
+                topicTime=3;
+                if(arrNum.indexOf(num3) == 2){
+                    arrNum[2]="减"+num3;
+                    strole3Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(-num3);
+                    answer1=(parseInt(num1)+parseInt(num2)-parseInt(num3)).toString()
+                    return;
+                }else {
+                    strole3Fun(t,arrNum);
+                    arrT.push(arrNum[0]);
+                    arrT.push(arrNum[1]);
+                    arrT.push(arrNum[2]);
+                    answer1=(parseInt(arrNum[0])+parseInt(arrNum[1])+parseInt(arrNum[2])).toString()
+                    return;
+                }
+            }else if(topicTypes == 2){
+                t=1500;
+                num1=numFun(2);num2=numFun(2);num3=numFun(1);
+                arrNum=[num1,num2,num3];
+                arrNum.sort(randomsort);
+                topicTime=3;
+                if(arrNum.indexOf(num3) > 0){
+                    var seat = arrNum.indexOf(num3);
+                    arrNum[(seat)]="减"+num3;
+                    strole3Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(-num3);
+                    answer1=(parseInt(num1)+parseInt(num2)-parseInt(num3)).toString()
+                    return;
+                }else {
+                    strole3Fun(t,arrNum);
+                    arrT.push(arrNum[0]);
+                    arrT.push(arrNum[1]);
+                    arrT.push(arrNum[2]);
+                    answer1=(parseInt(arrNum[0])+parseInt(arrNum[1])+parseInt(arrNum[2])).toString()
+                    return;
+                }
+            }else if(topicTypes == 3){
+                t=1500;
+                num1=numFun(2);num2=numFun(2);num3=numFun(2);num4=numFun(1);
+                arrNum=[num1,num2,num3,num4];
+                arrNum.sort(randomsort);
+                topicTime=4;
+                if(arrNum.indexOf(num2) == 0){
+                    var seat = arrNum.indexOf(num4);
+                    arrNum[(seat)]="减"+num4;
+                    strole4Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(-num4);
+                    arrT.push(num3);
+                    answer1=(parseInt(num1)+parseInt(num2)+parseInt(num3)-parseInt(num4)).toString()
+                    return;
+                }else {
+                    strole4Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(num4);
+                    arrT.push(num3);
+                    answer1=(parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)).toString()
+                    return;
+                }
+            }else if(topicTypes == 4){
+                t=1500;
+                num1=numFun(2);num2=numFun(2);num3=numFun(2);num4=numFun(1);num5=numFun(1);
+                arrNum=[num1,num2,num3,num4,num5];
+                arrNum.sort(randomsort);
+                topicTime=5;
+                if(arrNum.indexOf(num5)== 2 || arrNum.indexOf(num5)==4){
+                    var seat = arrNum.indexOf(num5);
+                    arrNum[(seat)]="减"+num5;
+                    strole5Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(-num5);
+                    arrT.push(num3);
+                    arrT.push(num4);
+                    answer1=(parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)-parseInt(num5)).toString()
+                    return;
+                }else {
+                    strole5Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(num5);
+                    arrT.push(num3);
+                    arrT.push(num4);
+                    answer1=(parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5)).toString()
+                    return;
+                }
+            }else if(topicTypes == 5){
+                t=1500;
+                num1=numFun(2);num2=numFun(2);num3=numFun(2);num4=numFun(2);num5=numFun(1);
+                arrNum=[num1,num2,num3,num4,num5];
+                arrNum.sort(randomsort);
+                topicTime=5;
+                if(arrNum.indexOf(num5)== 1 || arrNum.indexOf(num5)==3){
+                    var seat = arrNum.indexOf(num5);
+                    arrNum[(seat)]="减"+num5;
+                    strole5Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(-num5);
+                    arrT.push(num3);
+                    arrT.push(num4);
+                    answer1=(parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)-parseInt(num5)).toString()
+                    return;
+                }else {
+                    strole5Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(num5);
+                    arrT.push(num3);
+                    arrT.push(num4);
+                    answer1=(parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5)).toString()
+                    return;
+                }
+            }else if(topicTypes == 6){
+                t=1500;
+                num1=numFun(3);num2=numFun(2);num3=numFun(2);
+                arrNum=[num1,num2,num3];
+                arrNum.sort(randomsort);
+                topicTime=3;
+                if(arrNum.indexOf(num3) == 2){
+                    arrNum[2]="减"+num3;
+                    strole3Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(-num3);
+                    answer1=(parseInt(num1)+parseInt(num2)-parseInt(num3)).toString()
+                    return;
+                }else {
+                    strole3Fun(t,arrNum);
+                    arrT.push(arrNum[0]);
+                    arrT.push(arrNum[1]);
+                    arrT.push(arrNum[2]);
+                    answer1=(parseInt(arrNum[0])+parseInt(arrNum[1])+parseInt(arrNum[2])).toString()
+                    return;
+                }
+            }else if(topicTypes == 7){
+                t=1500;
+                num1=numFun(3);num2=numFun(3);num3=numFun(2);
+                arrNum=[num1,num2,num3];
+                arrNum.sort(randomsort);
+                topicTime=3;
+                if(arrNum.indexOf(num3) > 0){
+                    var seat = arrNum.indexOf(num3);
+                    arrNum[(seat)]="减"+num3;
+                    strole3Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(-num3);
+                    answer1=(parseInt(num1)+parseInt(num2)-parseInt(num3)).toString()
+                    return;
+                }else {
+                    strole3Fun(t,arrNum);
+                    arrT.push(arrNum[0]);
+                    arrT.push(arrNum[1]);
+                    arrT.push(arrNum[2]);
+                    answer1=(parseInt(arrNum[0])+parseInt(arrNum[1])+parseInt(arrNum[2])).toString()
+                    return;
+                }
+            }else if(topicTypes == 8){
+                t=1500;
+                num1=numFun(3);num2=numFun(3);num3=numFun(2);num4=numFun(2);
+                arrNum=[num1,num2,num3,num4];
+                arrNum.sort(randomsort);
+                topicTime=4;
+                if(arrNum.indexOf(num2) == 0){
+                    var seat = arrNum.indexOf(num4);
+                    arrNum[(seat)]="减"+num4;
+                    strole4Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(-num4);
+                    arrT.push(num3);
+                    answer1=(parseInt(num1)+parseInt(num2)+parseInt(num3)-parseInt(num4)).toString()
+                    return;
+                }else {
+                    strole4Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(num4);
+                    arrT.push(num3);
+                    answer1=(parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)).toString()
+                    return;
+                }
+            }else if(topicTypes == 9){
+                t=1500;
+                num1=numFun(3);num2=numFun(2);num3=numFun(2);num4=numFun(1);num5=numFun(1);
+                arrNum=[num1,num2,num3,num4,num5];
+                arrNum.sort(randomsort);
+                topicTime=5;
+                if(arrNum.indexOf(num1)== 0 && arrNum.indexOf(num4)==4){
+                    var seat = arrNum.indexOf(num2);
+                    arrNum[(seat)]="减"+num2;
+                    var seat = arrNum.indexOf(num4);
+                    arrNum[(seat)]="减"+num4;
+                    strole5Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(-num2);
+                    arrT.push(num5);
+                    arrT.push(num3);
+                    arrT.push(-num4);
+                    answer1=(parseInt(num1)-parseInt(num2)+parseInt(num3)-parseInt(num4)+parseInt(num5)).toString()
+                    return;
+                }else if(arrNum.indexOf(num3)>2){
+                    var seat = arrNum.indexOf(num3);
+                    arrNum[(seat)]="减"+num3;
+                    strole5Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(num5);
+                    arrT.push(-num3);
+                    arrT.push(num4);
+                    answer1=(parseInt(num1)+parseInt(num2)-parseInt(num3)+parseInt(num4)+parseInt(num5)).toString()
+                    return;
+                }else {
+                    strole5Fun(t,arrNum);
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(num5);
+                    arrT.push(num3);
+                    arrT.push(num4);
+                    answer1=(parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5)).toString()
+                    return;
+                }
+            }else if(topicTypes == 10){
+                t=1500;
+                num1=numFun(3);num2=numFun(2);num3=numFun(2);num4=numFun(1);num5=numFun(1);num6=numFun(1);
+                arrNum=[num1,num2,num3,num4,num5,num6];
+                arrNum.sort(randomsort);
+                topicTime=5;
+                if(arrNum.indexOf(num1)== 0 && arrNum.indexOf(num4)==5){
+                    var seat = arrNum.indexOf(num2);
+                    arrNum[(seat)]="减"+num2;
+                    var seat = arrNum.indexOf(num4);
+                    arrNum[(seat)]="减"+num4;
+                    strole6Fun(t,arrNum)
+                    arrT.push(num1);
+                    arrT.push(-num2);
+                    arrT.push(num5);
+                    arrT.push(num6);
+                    arrT.push(num3);
+                    arrT.push(-num4);
+                    answer1=(parseInt(num1)-parseInt(num2)+parseInt(num3)-parseInt(num4)+parseInt(num5)+parseInt(num6)).toString();
+                    return;
+                }else if(arrNum.indexOf(num1)== 0){
+                    var seat = arrNum.indexOf(num2);
+                    arrNum[(seat)]="减"+num2;
+                    strole6Fun(t,arrNum)
+                    arrT.push(num1);
+                    arrT.push(-num2);
+                    arrT.push(num5);
+                    arrT.push(num6);
+                    arrT.push(num3);
+                    arrT.push(+num4);
+                    answer1=(parseInt(num1)-parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5)+parseInt(num6)).toString();
+                    return;
+                }else {
+                    strole6Fun(t,arrNum)
+                    arrT.push(num1);
+                    arrT.push(num2);
+                    arrT.push(num5);
+                    arrT.push(num6);
+                    arrT.push(num3);
+                    arrT.push(+num4);
+                    answer1=(parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5)+parseInt(num6)).toString();
+                    return;
+                }
+            }
+        }
         $("#stepBtn2").on("click",function () {
-            enter=false;
-            spacer=true;
-            answer=$.trim($("#answer").val());
-            if(num == answer){
-                $("#yesNo").text("答对了")
+            stepBtn2Fun()
+        });
+
+        $("#answer").bind('input propertychange',function(){
+            var nameVal = $("#answer").val();
+            console.log(nameVal);
+            if(nameVal == null || nameVal == "" || nameVal == undefined){
+                $("#stepBtn2").attr("disabled","disabled");
+                enter=false;
             }else {
-                $("#yesNo").text("答错了")
-            }
-            beadFun(1,num);
-            topicTime=0;
-            clearInterval(timer1);
-            endTime=new Date().getTime();
-            time=(endTime-beginTime).toFixed(0);
-            timeset.push(time);
-            correctanswerset.push(num);
-            commentset.push(arrT.join(","));
-            stimidset.push(stimid);
-            type4set.push(pens);
-            numset.push(answer);
-            $("#time").text(time);
-            $("#step1").css({
-                "display": "none"
-            });
-
-            $("#step2").css({
-                "display": "none"
-            });
-            $("#step3").css({
-                "display": "block"
-            });
-            NexTimer=setInterval(function () {
-                NextFun();
-            }, 1000);
-        });
-
-        $("#stepBtn3").on("click",function () {
-            stimid++;
-            pensFun(pens);
-
-            $("#step1").css({
-                "display": "none"
-            });
-
-            $("#step2").css({
-                "display": "block"
-            });
-            $("#step3").css({
-                "display": "none"
-            });
-            $("#answer").val("");
-            $("input").focus();
-            beginTime=new Date().getTime();
-
-        });
-
-        $(document).keydown(function (event) {
-            var e = event || window.event;
-            var k = e.keyCode || e.which;
-            if(k == 13){
-                if(enter){
-                    enter=false;
-                    spacer=true;
-                    // num=(parseInt(num1)+parseInt(num2)-parseInt(num3)).toString();
-                    answer=$.trim($("#answer").val());
-                    if(num == answer){
-                        $("#yesNo").text("答对了")
-                    }else {
-                        $("#yesNo").text("答错了")
-                    }
-                    topicTime=0;
-                    clearInterval(timer1);
-                    beadFun(1,num);
-                    endTime=new Date().getTime();
-                    time=(endTime-beginTime).toFixed(0);
-                    timeset.push(time);
-                    correctanswerset.push(num);
-                    commentset.push(arrT.join(","));
-                    stimidset.push(stimid);
-                    type4set.push(pens);
-                    numset.push(answer);
-                    $("#time").text(time);
-                    $("#step1").css({
-                        "display": "none"
-                    });
-
-                    $("#step2").css({
-                        "display": "none"
-                    });
-                    $("#step3").css({
-                        "display": "block"
-                    });
-                    NexTimer=setInterval(function () {
-                        NextFun();
-                    }, 1000);
-                }
-            }
-
-
-
-
-            /*if(k == 32){
-                if(spacer){
-                    spacer=false;
-                    enter=true;
-                    stimid++;
-                    pensFun(pens);
-
-                    $("#step1").css({
-                        "display": "none"
-                    });
-
-                    $("#step2").css({
-                        "display": "block"
-                    });
-                    $("#step3").css({
-                        "display": "none"
-                    });
-                    $("#answer").val("");
-                    $("input").focus();
-                    beginTime=new Date().getTime();
-                }
-            }*/
-        });
-        function NextFun() {
-            if (NexTime > 0) {
-                --NexTime;
-                console.log(NexTime);
-            } else{
-                clearInterval(NexTimer);
-                NexTime=1;
-                spacer=false;
+                $("#stepBtn2").removeAttr("disabled");
                 enter=true;
-                stimid++;
-                pensFun(pens);
-
-                $("#step1").css({
-                    "display": "none"
-                });
-
-                $("#step2").css({
-                    "display": "block"
-                });
-                $("#step3").css({
-                    "display": "none"
-                });
-                $("#answer").val("");
-                $("input").focus();
-                beginTime=new Date().getTime();
-
             }
-        }
 
-        function showHideFun(data) {
-            if(data == "3"){
-                $("#t1").css({
-                    "display": "block"
-                });
-                $("#t2").css({
-                    "display": "block"
-                });
-                $("#t3").css({
-                    "display": "block"
-                });
-                $("#t4").css({
-                    "display": "none"
-                });
-                $("#t5").css({
-                    "display": "none"
-                });
-                $("#t6").css({
-                    "display": "none"
-                });
-                $("#t7").css({
-                    "display": "none"
-                });
-            }else if(data == "4"){
-
-                $("#t1").css({
-                    "display": "block"
-                });
-                $("#t2").css({
-                    "display": "block"
-                });
-                $("#t3").css({
-                    "display": "block"
-                });
-                $("#t4").css({
-                    "display": "block"
-                });
-                $("#t5").css({
-                    "display": "none"
-                });
-                $("#t6").css({
-                    "display": "none"
-                });
-                $("#t7").css({
-                    "display": "none"
-                });
-            }else if(data == "5"){
-
-                $("#t1").css({
-                    "display": "block"
-                });
-                $("#t2").css({
-                    "display": "block"
-                });
-                $("#t3").css({
-                    "display": "block"
-                });
-                $("#t4").css({
-                    "display": "block"
-                });
-                $("#t5").css({
-                    "display": "block"
-                });
-                $("#t6").css({
-                    "display": "none"
-                });
-                $("#t7").css({
-                    "display": "none"
-                });
-            }else if(data == "6"){
-
-                $("#t1").css({
-                    "display": "block"
-                });
-                $("#t2").css({
-                    "display": "block"
-                });
-                $("#t3").css({
-                    "display": "block"
-                });
-                $("#t4").css({
-                    "display": "block"
-                });
-                $("#t5").css({
-                    "display": "block"
-                });
-                $("#t6").css({
-                    "display": "block"
-                });
-                $("#t7").css({
-                    "display": "none"
-                });
-            }else if(data == "7"){
-
-                $("#t1").css({
-                    "display": "block"
-                });
-                $("#t2").css({
-                    "display": "block"
-                });
-                $("#t3").css({
-                    "display": "block"
-                });
-                $("#t4").css({
-                    "display": "block"
-                });
-                $("#t5").css({
-                    "display": "block"
-                });
-                $("#t6").css({
-                    "display": "block"
-                });
-                $("#t7").css({
-                    "display": "block"
-                });
-            }
-        }
-        function fayin(str,speed){
-            var str_code=encodeURI(str);
-            var str_fayin='';
-            $("#fayin").html('');
-            var str_fayin="<audio id='music' autoplay='autoplay'><source src='http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd="+speed+"&text="+str_code+"' type='audio/mpeg'></audio>";
-            $("#fayin").html(str_fayin);
-
-        }
+        });
 
         function post_result() {
             var opes_result_data = {};
@@ -1051,9 +794,8 @@ Vector
             opes_result_data.correctanswerset = correctanswerset.join(";");
             opes_result_data.time = "0";
             opes_result_data.level = "0";
-
             opes_result_data.timeset = timeset.join(";");
-            opes_result_data.radioset = "0";
+            opes_result_data.radioset ="0";
             opes_result_data.buttonset = numset.join(";");
             opes_result_data.commentset = commentset.join(";");
             opes_result_data.numset = numset.join(";");
@@ -1069,14 +811,197 @@ Vector
             var obj = result;
             for (var name in obj) {
                 msg += obj[name] + "{" + name + "};";
-            }
-
-
-            ;
+            };
             msg = (msg.slice(msg.length - 1) == ';') ? msg.slice(0, -1) : msg;
             return msg;
         }
 
+        function strole3Fun(t,arrNum) {
+            timer1 = setInterval(function () {
+                if(topicTime==3){
+                    fayin(arrNum[0],speed);
+                }else if(topicTime==2){
+                    fayin(arrNum[1],speed);
+                }else if(topicTime==1){
+                    fayin(arrNum[2],speed);
+                    $("#answer").removeAttr("disabled");
+                    $("#answer").val("");
+                    $("input").focus();
+                    clearInterval(timer1);
+                }else if(topicTime==0){
+                    clearInterval(timer1);
+                    topicTime=0;
+                }
+                topicTime--
+            }, t);
+        }
+        function strole4Fun(t,arrNum) {
+            timer1 = setInterval(function () {
+                if(topicTime==4){
+                    fayin(arrNum[0],speed);
+                }else if(topicTime==3){
+                    fayin(arrNum[1],speed);
+                }else if(topicTime==2){
+                    fayin(arrNum[2],speed);
+                }else if(topicTime==1){
+                    fayin(arrNum[3],speed);
+                    $("#answer").removeAttr("disabled");
+                    $("#answer").val("");
+                    $("input").focus();
+                    clearInterval(timer1);
+                }else if(topicTime==0){
+                    clearInterval(timer1);
+                    topicTime=0;
+                }
+                topicTime--
+            }, t);
+        }
+        function strole5Fun(t,arrNum) {
+            timer1 = setInterval(function () {
+                if(topicTime==5){
+                    fayin(arrNum[0],speed);
+                }else if(topicTime==4){
+                    fayin(arrNum[1],speed);
+                }else if(topicTime==3){
+                    fayin(arrNum[2],speed);
+                }else if(topicTime==2){
+                    fayin(arrNum[3],speed);
+                }else if(topicTime==1){
+                    fayin(arrNum[4],speed);
+                    $("#answer").removeAttr("disabled");
+                    $("#answer").val("");
+                    $("input").focus();
+                    clearInterval(timer1);
+                }else if(topicTime==0){
+                    clearInterval(timer1);
+                    topicTime=0;
+                }
+                topicTime--
+            }, t);
+        }
+        function strole6Fun(t,arrNum) {
+            timer1 = setInterval(function () {
+                if(topicTime==6){
+                    fayin(arrNum[0],speed);
+                }else if(topicTime==5){
+                    fayin(arrNum[1],speed);
+                }else if(topicTime==4){
+                    fayin(arrNum[2],speed);
+                }else if(topicTime==3){
+                    fayin(arrNum[3],speed);
+                }else if(topicTime==2){
+                    fayin(arrNum[4],speed);
+                }else if(topicTime==1){
+                    fayin(arrNum[5],speed);
+                    $("#answer").removeAttr("disabled");
+                    $("#answer").val("");
+                    $("input").focus();
+                    clearInterval(timer1);
+                }else if(topicTime==0){
+                    clearInterval(timer1);
+                    topicTime=0;
+                }
+                topicTime--
+            }, t);
+        }
+
+        $(document).keydown(function (event) {
+            var e = event || window.event;
+            var k = e.keyCode || e.which;
+            if(k == 13){
+                if(enter){
+                    stepBtn2Fun()
+                }
+            }
+        });
+
+        function stepBtn2Fun(){
+            enter=false;
+            answer=$.trim($("#answer").val());
+            if(answer1 == answer){
+                $("#yesNo").text("答对了")
+            }else {
+                $("#yesNo").text("答错了")
+            }
+            beadFun(1,answer1);
+            topicTime=0;
+            clearInterval(timer1);
+            endTime=new Date().getTime();
+            time=(endTime-beginTime).toFixed(0);
+            $("#time").text(time);
+            timeset.push(time);
+            correctanswerset.push(answer1);
+            commentset.push(arrT.join(","));
+            stimidset.push(stimid);
+            type4set.push(topicTypes);
+            numset.push(answer);
+
+
+            $("#step1").css({
+                "display": "none"
+            });
+
+            $("#step2").css({
+                "display": "none"
+            });
+            $("#step3").css({
+                "display": "block"
+            });
+
+            NexTimer=setInterval(function () {
+                NextFun();
+            }, 1000);
+        }
+
+        function NextFun(){
+            if (NexTime > 0) {
+                --NexTime;
+            } else{
+                clearInterval(NexTimer);
+                NexTime=1;
+                enter=true;
+                stimid++;
+                $("#answer").attr("disabled","disabled");
+                $("#stepBtn2").attr("disabled","disabled");
+                topicFun(topicTypes);
+
+                $("#step1").css({
+                    "display": "none"
+                });
+
+                $("#step2").css({
+                    "display": "block"
+                });
+                $("#step3").css({
+                    "display": "none"
+                });
+                $("#answer").val("");
+                beginTime=new Date().getTime();
+
+            }
+        }
+
+        function CountDown() {
+            if (maxtime >= 0) {
+                minutes = Math.floor(maxtime / 60);
+                seconds = Math.floor(maxtime % 60);
+                msg = "距离结束还有" + minutes + "分" + seconds + "秒";
+                $("#tir").text(msg);
+                --maxtime;
+            } else{
+                clearInterval(timer);
+                post_result()
+            }
+        }
+        /*语言*/
+        function fayin(str,speed){
+            var str_code=encodeURI(str);
+            var str_fayin='';
+            $("#fayin").html('');
+            var str_fayin="<audio id='music' autoplay='autoplay'><source src='http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd="+speed+"&text="+str_code+"' type='audio/mpeg'></audio>";
+            $("#fayin").html(str_fayin);
+
+        }
         function beadFun(n,num) {
             var digit;
             digit=num.toString().length;
@@ -1642,14 +1567,6 @@ Vector
             }
         }
 
-
-
-
-
     });
-
-
-
-
 </script>
 </html>

@@ -1023,10 +1023,10 @@ function pageWidth() {
     return $(window).width();}
 
 var mebtnopenurl = 'http://bbs.heirui.cn';
-var rankurl = 'http://bbs.heirui.cn/games/ygj/index.html';
+var rankurl = 'http://bbs.heirui.cn/games/ygj/index.jsp';
 window.shareData = {
     "imgUrl": "http://bbs.heirui.cn/games/ygj/resources/logo_small.jpg",
-    "timeLineLink": "http://bbs.heirui.cn/games/ygj/index.html",
+    "timeLineLink": "http://bbs.heirui.cn/games/ygj/index.jsp",
     "tTitle": "一根筋玩到底-viying001",
     "tContent": "你今天一根筋了吗？根本停不下来啊！"
 };
@@ -1036,7 +1036,7 @@ function goHome() {
 }
 function clickMore(){
 			if((window.location+"").indexOf("zf",1)>0){
-				window.location = "http://bbs.heirui.cn/games/ygj/index.html";
+				window.location = "http://bbs.heirui.cn/games/ygj/index.jsp";
 			 }
 			 else{
 				goHome();

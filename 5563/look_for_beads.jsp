@@ -350,7 +350,7 @@ Vector
             </div>
         </div>
         <div class="tc">
-            <button class="btn" id="step3Btn">下一题</button>
+            <%--<button class="btn" id="step3Btn">下一题</button>--%>
         </div>
     </div>
 </div>
@@ -359,10 +359,11 @@ Vector
 <!--<script src="look_for_beads.js"></script>-->
 <script>
     $(function () {
-        var topicNum;
+        var topicNum=0;
         var daan;
         var speed=5;
         var digit="1";
+        var NexTime=1;
         var num;
         var gw=[1,2,3,4,5,6,7,8,9];
         var dw=[1,2,3,0,4,5,6,7,8,9];
@@ -407,6 +408,12 @@ Vector
             enter=true;
         });
         $("#step2Btn").on("click",function () {
+            step2BtnFun()
+        });
+
+        function step2BtnFun(){
+            enter=false;
+            spacer=true;
             daan=$.trim($("#num1").val());
             $("#t2").text(daan);
             beadFun(1,num);
@@ -424,10 +431,13 @@ Vector
             stimidset.push(topicNum);
             timeset.push(time);
             stepFun(3);
-            enter=false;
-            spacer=true;
-        });
-        $("#step3Btn").on("click",function () {
+            NexTimer=setInterval(function () {
+                NextFun();
+            }, 1000);
+        }
+        function step3BtnFun(){
+            spacer=false;
+            enter=true;
             $("#num1").val("");
             topicNum++;
             for(var i=0;i<digit;i++){
@@ -443,34 +453,29 @@ Vector
             beginTime=new Date().getTime();
             stepFun(2);
             $("#num1").focus();
-            spacer=false;
-            enter=true;
-        });
+        }
 
+        $("#step3Btn").on("click",function () {
+            step3BtnFun()
+
+        });
+        function NextFun(){
+            if (NexTime > 0) {
+                --NexTime;
+            } else{
+                clearInterval(NexTimer);
+                NexTime=1;
+                step3BtnFun()
+
+            }
+        }
 
         $(document).keydown(function (event) {
             var e = event || window.event;
             var k = e.keyCode || e.which;
             if(k == 13){
                 if(enter){
-                    enter=false;
-                    spacer=true;
-                    daan=$.trim($("#num1").val());
-                    $("#t2").text(daan);
-                    beadFun(1,num);
-                    if(daan == num){
-                        $("#t1").text("答对了")
-                    }else {
-                        $("#t1").text("答错了")
-                    }
-                    endTime=new Date().getTime();
-                    time=(endTime-beginTime).toFixed(0);
-                    correctanswerset.push(num);
-                    numset.push(daan);
-                    type4set.push(digit);
-                    stimidset.push(topicNum);
-                    timeset.push(time);
-                    stepFun(3);
+                    step2BtnFun()
                 }
             }
 
@@ -479,22 +484,7 @@ Vector
 
             if(k == 32){
                 if(spacer){
-                    spacer=false;
-                    enter=true;
-                    $("#num1").val("");
-                    topicNum++;
-                    for(var i=0;i<digit;i++){
-                        if(i==0){
-                            num=(gw[Math.floor(Math.random()*gw.length)]).toString()
-                        }else {
-                            num += (dw[Math.floor(Math.random()*dw.length)]).toString()
-                        }
-                    }
-                    var str=splicingFun(num);
-                    fayin(str,speed);
-                    beginTime=new Date().getTime();
-                    stepFun(2);
-                    $("#num1").focus();
+                    step3BtnFun()
                 }
             }
         });

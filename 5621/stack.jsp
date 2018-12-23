@@ -170,7 +170,7 @@ function play68_init() {
 
 function updateShare(bestScore) {
 	imgUrl = './icon.png';
-	lineLink = './index.html';
+	lineLink = './index.jsp';
 	descContent = "创意跳高游戏，快来一起跳！";
 	updateShareScore(bestScore);
 	appid = '';

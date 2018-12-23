@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>看心算</title>
+    <title>看珠算</title>
     <style>
 
         .box{
@@ -112,11 +112,11 @@
 
         }
         .ti .tl{
-            width: 100%;
+            width: 130px;
             padding: 8px 0px;
             font-size: 28px;
             font-weight: 700;
-            text-align: left;
+            text-align: right;
         }
         .boxBeam{
             height: 170px;
@@ -227,7 +227,7 @@ Vector
     <div class="box">
         <div id="tir" style="color: #9f0f17;position: fixed;top: 0px;width: 500px;height: 100px"></div>
         <div id="step1" class="step step1">
-            <h1 style="margin: 0px">看心算</h1>
+            <h1 style="margin: 0px">看珠算</h1>
             <!--digit-->
             <div class="levelBox">
                 <div class="title">位数</div>
@@ -236,7 +236,7 @@ Vector
                     <span class="le digit">2</span>
                     <span class="le digit">3</span>
                     <span class="le digit">4</span>
-                    <!--<span class="le digit">5</span>-->
+                    <span class="le digit">5</span>
                     <!--<span class="le digit">6</span>-->
                     <!--<span class="le digit">7</span>-->
                 </div>
@@ -263,306 +263,13 @@ Vector
         <div id="step2" class="step step2">
 
             <div class="ti">
-                <div id="t1" class="tl t1">
-
-                    <div id="paX_1" class="boxBeamX">
-                        <div class="beamBoxX">
-                            <div class="beam" style="left: 0px;">千</div>
-                            <div class="beam" style="left: 40px;">百</div>
-                            <div class="beam" style="left: 80px;">十</div>
-                            <div class="beam" style="left: 120px;">个</div>
-                        </div>
-
-                        <div id="paX_1_1" class="beadBoxX" style="right: 5px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_1_2" class="beadBoxX" style="right: 45px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_1_3" class="beadBoxX" style="right: 85px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_1_4" class="beadBoxX" style="right: 125px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="t2" class="tl t2">
-                    <div id="paX_2" class="boxBeamX">
-                        <div class="beamBoxX">
-                            <div class="beam" style="left: 0px;">千</div>
-                            <div class="beam" style="left: 40px;">百</div>
-                            <div class="beam" style="left: 80px;">十</div>
-                            <div class="beam" style="left: 120px;">个</div>
-                        </div>
-
-                        <div id="paX_2_1" class="beadBoxX" style="right: 5px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_2_2" class="beadBoxX" style="right: 45px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_2_3" class="beadBoxX" style="right: 85px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_2_4" class="beadBoxX" style="right: 125px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="t3" class="tl t3">
-                    <div id="j3" style="font-weight: 700;font-size: 70px;line-height: 106px;position: absolute;left: 0px">-</div>
-                    <div id="paX_3" class="boxBeamX">
-                        <div class="beamBoxX">
-                            <div class="beam" style="left: 0px;">千</div>
-                            <div class="beam" style="left: 40px;">百</div>
-                            <div class="beam" style="left: 80px;">十</div>
-                            <div class="beam" style="left: 120px;">个</div>
-                        </div>
-
-                        <div id="paX_3_1" class="beadBoxX" style="right: 5px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_3_2" class="beadBoxX" style="right: 45px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_3_3" class="beadBoxX" style="right: 85px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_3_4" class="beadBoxX" style="right: 125px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="t4" class="tl t4">
-                    <div id="j4" style="font-weight: 700;font-size: 70px;line-height: 106px;position: absolute;left: 0px">-</div>
-                    <div id="paX_4" class="boxBeamX">
-                        <div class="beamBoxX">
-                            <div class="beam" style="left: 0px;">千</div>
-                            <div class="beam" style="left: 40px;">百</div>
-                            <div class="beam" style="left: 80px;">十</div>
-                            <div class="beam" style="left: 120px;">个</div>
-                        </div>
-
-                        <div id="paX_4_1" class="beadBoxX" style="right: 5px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_4_2" class="beadBoxX" style="right: 45px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_4_3" class="beadBoxX" style="right: 85px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_4_4" class="beadBoxX" style="right: 125px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="t5" class="tl t5">
-                    <div id="j5" style="font-weight: 700;font-size: 70px;line-height: 106px;position: absolute;left: 0px">-</div>
-                    <div id="paX_5" class="boxBeamX">
-                        <div class="beamBoxX">
-                            <div class="beam" style="left: 0px;">千</div>
-                            <div class="beam" style="left: 40px;">百</div>
-                            <div class="beam" style="left: 80px;">十</div>
-                            <div class="beam" style="left: 120px;">个</div>
-                        </div>
-
-                        <div id="paX_5_1" class="beadBoxX" style="right: 5px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_5_2" class="beadBoxX" style="right: 45px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_5_3" class="beadBoxX" style="right: 85px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_5_4" class="beadBoxX" style="right: 125px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="t6" class="tl t6">
-                    <div id="j6" style="font-weight: 700;font-size: 70px;line-height: 106px;position: absolute;left: 0px">-</div>
-                    <div id="paX_6" class="boxBeamX">
-                        <div class="beamBoxX">
-                            <div class="beam" style="left: 0px;">千</div>
-                            <div class="beam" style="left: 40px;">百</div>
-                            <div class="beam" style="left: 80px;">十</div>
-                            <div class="beam" style="left: 120px;">个</div>
-                        </div>
-
-                        <div id="paX_6_1" class="beadBoxX" style="right: 5px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_6_2" class="beadBoxX" style="right: 45px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_6_3" class="beadBoxX" style="right: 85px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_6_4" class="beadBoxX" style="right: 125px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="t7" class="tl t7">
-                    <div id="j7" style="font-weight: 700;font-size: 70px;line-height: 106px;position: absolute;left: 0px">-</div>
-                    <div id="paX_7" class="boxBeamX">
-                        <div class="beamBoxX">
-                            <div class="beam" style="left: 0px;">千</div>
-                            <div class="beam" style="left: 40px;">百</div>
-                            <div class="beam" style="left: 80px;">十</div>
-                            <div class="beam" style="left: 120px;">个</div>
-                        </div>
-
-                        <div id="paX_7_1" class="beadBoxX" style="right: 5px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_7_2" class="beadBoxX" style="right: 45px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_7_3" class="beadBoxX" style="right: 85px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-
-                        <div id="paX_7_4" class="beadBoxX" style="right: 125px;">
-                            <div class="bead"></div>
-                            <div class="bead" style="top: 34px;"></div>
-                            <div class="bead" style="top: 52px;"></div>
-                            <div class="bead" style="top: 70px;"></div>
-                            <div class="bead" style="top: 88px;"></div>
-                        </div>
-                    </div>
-                </div>
+                <div id="t1" class="tl t1"></div>
+                <div id="t2" class="tl t2"></div>
+                <div id="t3" class="tl t3"></div>
+                <div id="t4" class="tl t4"></div>
+                <div id="t5" class="tl t5"></div>
+                <div id="t6" class="tl t6"></div>
+                <div id="t7" class="tl t7"></div>
                 <hr style="margin: 16px 0px">
                 <div><input onkeyup="this.value=this.value.replace(/\D/g,'')" id="answer" type="text" style="width: 100%"></div>
             </div>
@@ -572,7 +279,7 @@ Vector
 
 
             <div style="height: 60px; width: 100%; line-height: 60px; text-align: center;">
-                <button id="stepBtn2" class="btn">确认(ENTER)</button>
+                <button disabled="disabled" id="stepBtn2" class="btn">确认(ENTER)</button>
             </div>
 
 
@@ -744,13 +451,15 @@ Vector
 
             taskidFun(taskid);
             function taskidFun(taskid) {
-                if(taskid == "5513"){
-                    digit="1";
-
-                }else if(taskid == "5514"){
+                if(taskid == "5659"){
                     digit="2";
-                }else if(taskid == "5515"){
+
+                }else if(taskid == "5660"){
                     digit="3";
+                }else if(taskid == "5661"){
+                    digit="4";
+                }else if(taskid == "5662"){
+                    digit="5";
                 }
 
                 for (var i=1;i<8;i++){
@@ -818,6 +527,19 @@ Vector
                 }
                 return numA;
             }
+
+            $("#answer").bind('input propertychange',function(){
+                var nameVal = $("#answer").val();
+                if(nameVal == null || nameVal == "" || nameVal == undefined){
+                    $("#stepBtn2").attr("disabled","disabled");
+                    enter=false;
+                }else {
+                    $("#stepBtn2").removeAttr("disabled");
+                    enter=true;
+                }
+
+            });
+
             // 生成减数
             function subtractionFun(data) {
                 var arr2=data.split('');
@@ -886,34 +608,13 @@ Vector
                     num2=additionFun(num1);
                     numExcessive=(parseInt(num1)+parseInt(num2)).toString();
                     num3=subtractionFun(numExcessive);
-                    beadFunX(1,num1);
-                    beadFunX(2,num2);
-                    beadFunX(3,num3);
-
-                    $("#j3").css({
-                        "display": "block"
-                    });
-                    $("#j4").css({
-                        "display": "none"
-                    });
-                    $("#j5").css({
-                        "display": "none"
-                    });
-                    $("#j6").css({
-                        "display": "none"
-                    });
-                    $("#j7").css({
-                        "display": "none"
-                    });
+                    $("#t1").text(num1);
+                    $("#t2").text(num2);
+                    $("#t3").text(-num3);
 
                     arrT.push(num1);
                     arrT.push(num2);
                     arrT.push(-num3);
-                    // $("#t3").text("-");
-
-                    /*$("#t1").text(num1);
-                    $("#t2").text(num2);
-                    $("#t3").text(-num3);*/
                     num=(parseInt(numExcessive)-parseInt(num3)).toString();
                 }else if(pens == "4"){
                     num2=additionFun(num1);
@@ -921,29 +622,11 @@ Vector
                     num3=additionFun(numExcessive);
                     numExcessive=(parseInt(numExcessive)+parseInt(num3)).toString();
                     num4=subtractionFun(numExcessive);
-                    /*$("#t1").text(num1);
+                    $("#t1").text(num1);
                     $("#t2").text(num2);
                     $("#t3").text(num3);
-                    $("#t4").text(-num4);*/
-                    beadFunX(1,num1);
-                    beadFunX(2,num2);
-                    beadFunX(3,num3);
-                    beadFunX(4,num4);
-                    $("#j3").css({
-                        "display": "none"
-                    });
-                    $("#j4").css({
-                        "display": "block"
-                    });
-                    $("#j5").css({
-                        "display": "none"
-                    });
-                    $("#j6").css({
-                        "display": "none"
-                    });
-                    $("#j7").css({
-                        "display": "none"
-                    });
+                    $("#t4").text(-num4);
+
                     arrT.push(num1);
                     arrT.push(num2);
                     arrT.push(num3);
@@ -957,31 +640,12 @@ Vector
                     num4=additionFun(numExcessive);
                     numExcessive=(parseInt(numExcessive)+parseInt(num4)).toString();
                     num5=additionFun(numExcessive);
-                    /*$("#t1").text(num1);
+                    $("#t1").text(num1);
                     $("#t2").text(num2);
                     $("#t3").text(-num3);
                     $("#t4").text(num4);
-                    $("#t5").text(num5);*/
-                    beadFunX(1,num1);
-                    beadFunX(2,num2);
-                    beadFunX(3,num3);
-                    beadFunX(4,num4);
-                    beadFunX(5,num5);
-                    $("#j3").css({
-                        "display": "block"
-                    });
-                    $("#j4").css({
-                        "display": "none"
-                    });
-                    $("#j5").css({
-                        "display": "none"
-                    });
-                    $("#j6").css({
-                        "display": "none"
-                    });
-                    $("#j7").css({
-                        "display": "none"
-                    });
+                    $("#t5").text(num5);
+
 
                     arrT.push(num1);
                     arrT.push(num2);
@@ -1000,33 +664,13 @@ Vector
                     num5=additionFun(numExcessive);
                     numExcessive=(parseInt(numExcessive)+parseInt(num5)).toString();
                     num6=subtractionFun(numExcessive);
-                    /*$("#t1").text(num1);
+                    $("#t1").text(num1);
                     $("#t2").text(num2);
                     $("#t3").text(-num3);
                     $("#t4").text(num4);
                     $("#t5").text(num5);
-                    $("#t6").text(-num6);*/
-                    beadFunX(1,num1);
-                    beadFunX(2,num2);
-                    beadFunX(3,num3);
-                    beadFunX(4,num4);
-                    beadFunX(5,num5);
-                    beadFunX(6,num6);
-                    $("#j3").css({
-                        "display": "block"
-                    });
-                    $("#j4").css({
-                        "display": "none"
-                    });
-                    $("#j5").css({
-                        "display": "none"
-                    });
-                    $("#j6").css({
-                        "display": "block"
-                    });
-                    $("#j7").css({
-                        "display": "none"
-                    });
+                    $("#t6").text(-num6);
+
 
                     arrT.push(num1);
                     arrT.push(num2);
@@ -1048,35 +692,14 @@ Vector
                     num6=subtractionFun(numExcessive);
                     numExcessive=(parseInt(numExcessive)-parseInt(num6)).toString();
                     num7=additionFun(numExcessive);
-                    /*$("#t1").text(num1);
+                    $("#t1").text(num1);
                     $("#t2").text(num2);
                     $("#t3").text(-num3);
                     $("#t4").text(num4);
                     $("#t5").text(num5);
                     $("#t6").text(-num6);
-                    $("#t7").text(num7);*/
-                    beadFunX(1,num1);
-                    beadFunX(2,num2);
-                    beadFunX(3,num3);
-                    beadFunX(4,num4);
-                    beadFunX(5,num5);
-                    beadFunX(6,num6);
-                    beadFunX(7,num7);
-                    $("#j3").css({
-                        "display": "block"
-                    });
-                    $("#j4").css({
-                        "display": "none"
-                    });
-                    $("#j5").css({
-                        "display": "none"
-                    });
-                    $("#j6").css({
-                        "display": "block"
-                    });
-                    $("#j7").css({
-                        "display": "none"
-                    });
+                    $("#t7").text(num7);
+
 
                     arrT.push(num1);
                     arrT.push(num2);
@@ -1096,6 +719,7 @@ Vector
                 }, 1000);
                 pensFun(pens);
                 stimid++;
+                $("#stepBtn2").attr("disabled","disabled");
                 $("#step1").css({
                     "display": "none"
                 });
@@ -1151,7 +775,8 @@ Vector
             $("#stepBtn3").on("click",function () {
                 pensFun(pens);
                 stimid++;
-
+                $("#answer").val("");
+                $("input").focus();
                 $("#step1").css({
                     "display": "none"
                 });
@@ -1162,8 +787,6 @@ Vector
                 $("#step3").css({
                     "display": "none"
                 });
-                $("#answer").val("");
-                $("input").focus();
                 beginTime=new Date().getTime();
 
             });
@@ -1217,7 +840,6 @@ Vector
                         enter=true;
                         pensFun(pens);
                         stimid++;
-
                         $("#step1").css({
                             "display": "none"
                         });
@@ -1234,36 +856,6 @@ Vector
                     }
                 }*/
             });
-
-            function NextFun() {
-                if (NexTime > 0) {
-                    --NexTime;
-                    console.log(NexTime);
-                } else{
-                    clearInterval(NexTimer);
-                    NexTime=1;
-                    spacer=false;
-                    enter=true;
-                    pensFun(pens);
-                    stimid++;
-
-                    $("#step1").css({
-                        "display": "none"
-                    });
-
-                    $("#step2").css({
-                        "display": "block"
-                    });
-                    $("#step3").css({
-                        "display": "none"
-                    });
-                    $("#answer").val("");
-                    $("input").focus();
-                    beginTime=new Date().getTime();
-
-                }
-            }
-
             function showHideFun(data) {
                 if(data == "3"){
                     $("#t1").css({
@@ -1381,6 +973,36 @@ Vector
                     });
                 }
             }
+
+            function NextFun() {
+                if (NexTime > 0) {
+                    --NexTime;
+                    console.log(NexTime);
+                } else{
+                    clearInterval(NexTimer);
+                    NexTime=1;
+                    $("#stepBtn2").attr("disabled","disabled");
+                    spacer=false;
+                    enter=true;
+                    pensFun(pens);
+                    stimid++;
+                    $("#step1").css({
+                        "display": "none"
+                    });
+
+                    $("#step2").css({
+                        "display": "block"
+                    });
+                    $("#step3").css({
+                        "display": "none"
+                    });
+                    $("#answer").val("");
+                    $("input").focus();
+                    beginTime=new Date().getTime();
+
+                }
+            }
+
             function fayin(str,speed){
                 var str_code=encodeURI(str);
                 var str_fayin='';

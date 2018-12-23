@@ -398,7 +398,7 @@ Vector
 
                 $("#inputAnswer").removeAttr("disabled");
 
-                numset=$("#inputAnswer").val()+'';
+
                 beginTime=new Date().getTime();
                 ifBtn3=true;
             }
@@ -412,6 +412,7 @@ Vector
                     "background-color": "#aaa",
                     "border-color": "#aaa"
                 });
+                numset=$("#inputAnswer").val()+'';
                 endTime=new Date().getTime();
                 dumpTime=(endTime-beginTime).toFixed(0);
                 if(taskid == "5540"){

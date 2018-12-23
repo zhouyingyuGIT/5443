@@ -141,7 +141,7 @@ html {
 		<div id="overlayMask" style="display:none;"></div>
 		
 		<script language=javascript>
-			var mebtnopenurl = 'http://g.lanrenmb.com/index.html';
+			var mebtnopenurl = 'http://g.lanrenmb.com/index.jsp';
 			var thegameurl ="http://g.lanrenmb.com/games/znm/"; 
 			var guanzhuurl ="http://mp.weixin.qq.com/s?__biz=MjM5NjA0MTI0OQ==&mid=200068987&idx=1&sn=1de5daeaae94c66a3c46a13e20e8011e#rd";
 			window.shareData = {
@@ -251,7 +251,7 @@ html {
 		        opes_result_data.timeaverage = 0;
 
 		        //以下判断总题数
-		        opes_result_data.type4set = score+'';
+		        opes_result_data.type4set = "0";
 		        opes_result_data.stimidset = score+'';
 		        opes_result_data.correctanswerset = score+'';
 		        //opes_result_data.time = timer;
